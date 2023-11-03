@@ -6,12 +6,14 @@ import {
   Patch,
   Post,
   Delete,
+  Query,
 } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
   @Get()
-  findAll() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
     return [];
   }
 
